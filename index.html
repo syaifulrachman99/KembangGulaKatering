@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kembang Gula Catering</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><div class="wrap">
+  <span class="logo">KEMBANG GULA</span>
+  <nav><a href="#paket">Paket</a><a href="#menu">Menu</a><a href="#tamu">Tamu</a><a href="#rincian">Pilih Menu</a><a href="#biaya">Biaya</a><a href="#testimoni">Testimoni</a><a href="#kontak">Kontak</a></nav>
+</div></header>
+
+<section class="hero" id="hero"><div class="wrap">
+  <span class="badge">Fine Dining &amp; Luxury Catering</span>
+  <h1>Kelezatan Istimewa untuk <em>Momen Tak Terlupakan</em></h1>
+  <p>Katering pernikahan, jamuan korporat, dan pesta privat dengan cita rasa otentik dan presentasi yang memukau.</p>
+  <div class="cta">
+    <a class="btn" href="#kontak">Konsultasi Gratis</a>
+    <a class="btn ghost" href="#menu">Lihat Menu</a>
+  </div>
+  <div class="stats">
+    <div><b>100%</b><span>Halal</span></div>
+    <div><b>15+</b><span>Tahun Pengalaman</span></div>
+    <div><b>1.200+</b><span>Acara Sukses</span></div>
+    <div><b>5★</b><span>Rating Klien</span></div>
+  </div>
+</div></section>
+
+<section id="paket"><div class="wrap">
+  <span class="eyebrow">Paket Layanan</span>
+  <h2>Untuk Setiap Skala Acara</h2>
+  <div class="grid" id="paketGrid"></div>
+</div></section>
+
+<section id="menu" class="alt"><div class="wrap">
+  <span class="eyebrow">Eksplorasi Rasa</span>
+  <h2>Menu Unggulan</h2>
+  <div class="grid" id="menuGrid"></div>
+</div></section>
+
+<section id="tamu"><div class="wrap">
+  <span class="eyebrow">Hitung Tamu</span>
+  <h2>Berapa Tamu yang Akan Hadir?</h2>
+  <div class="card calc rv">
+    <label for="inv">Jumlah undangan yang disebar</label>
+    <input type="number" id="inv" min="1" max="5000" value="300">
+    <label for="per">Satu undangan berlaku untuk</label>
+    <select id="per"><option value="1">1 orang</option><option value="2" selected>2 orang (pasangan)</option><option value="3">3 orang (keluarga kecil)</option><option value="4">4 orang (keluarga)</option></select>
+    <label for="rate">Jenis acara (tingkat kehadiran)</label>
+    <select id="rate"></select>
+    <div class="res">
+      <div><b id="rInv">0</b><span>Total orang diundang</span></div>
+      <div><b id="rHadir">0</b><span>Perkiraan hadir</span></div>
+      <div class="wide"><b id="rPorsi">0</b><span id="rPorsiLabel">Porsi katering disarankan</span></div>
+    </div>
+    <div class="note" id="rRange"></div>
+    <div class="center"><button class="btn line" id="useBtn" type="button">Lanjut Pilih Menu ↓</button></div>
+  </div>
+</div></section>
+
+<section id="rincian" class="alt"><div class="wrap">
+  <span class="eyebrow">Pilih Menu</span>
+  <h2>Hitung Total Biaya Katering</h2>
+  <div class="card calc wide rv">
+    <label for="qty">Jumlah porsi (tamu hadir)</label>
+    <input type="number" id="qty" min="1" max="5000" value="250">
+    <div class="note" style="text-align:left;margin:6px 0 0">Terisi otomatis dari kalkulator tamu di atas, boleh diubah manual.</div>
+    <label>Pilih menu (harga per porsi)</label>
+    <div id="pickList"></div>
+    <div class="tbl" id="tbl"></div>
+    <div class="total" id="rTotal">Rp 0</div>
+    <div class="note" id="rPer"></div>
+    <div class="center"><a class="btn" id="waRinci" target="_blank" rel="noopener">Kirim Rincian via WhatsApp</a></div>
+  </div>
+</div></section>
+
+<section id="biaya"><div class="wrap">
+  <span class="eyebrow">Simulasi Instan</span>
+  <h2>Hitung Perkiraan Biaya</h2>
+  <div class="card calc rv">
+    <label for="pkg">Paket</label>
+    <select id="pkg"></select>
+    <label for="pax">Jumlah tamu: <b id="paxv">300</b></label>
+    <input type="range" id="pax" min="50" max="2000" step="50" value="300">
+    <div class="total" id="total">Rp 0</div>
+    <div class="note">Perkiraan awal. Harga final menyesuaikan lokasi dan tanggal.</div>
+    <div class="center"><a class="btn" id="wa" href="#kontak">Minta Penawaran</a></div>
+  </div>
+</div></section>
+
+<section id="testimoni" class="alt"><div class="wrap">
+  <span class="eyebrow">Testimoni</span>
+  <h2>Kata Mereka</h2>
+  <div class="grid" id="testiGrid"></div>
+</div></section>
+
+<section id="kontak" class="final"><div class="wrap center">
+  <span class="eyebrow">Hubungi Kami</span>
+  <h2>Rencanakan Acara Istimewa Anda</h2>
+  <p id="kontakInfo"></p>
+  <a class="btn" data-wa="Halo KEMBANG GULA, saya ingin konsultasi katering" target="_blank" rel="noopener">Chat WhatsApp</a>
+</div></section>
+
+<footer>© 2026 KEMBANG GULA Catering</footer>
+<a class="wafab" data-wa="Halo KEMBANG GULA, saya ingin tanya paket katering" target="_blank" rel="noopener" aria-label="Chat WhatsApp">💬</a>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
