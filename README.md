@@ -1,4 +1,4 @@
-# Royal Prestige Catering — Website
+# Kembang Gula Catering — Website
 
 ## Struktur folder
 ```
